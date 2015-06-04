@@ -2,5 +2,5 @@
 
 Try online: http://ideone.com/gzLXHh
 """
-s=filter(lambda num:len([x for x in range(num+1) if x > 0 and num%x==0])==2,range(1000))
+s=filter(lambda i:all([i%x!=0 for x in range(2,i)]),range(2,1000))
 print s
